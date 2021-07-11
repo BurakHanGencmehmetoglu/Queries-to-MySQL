@@ -1,0 +1,23 @@
+I established connection to the MySQL server using JDBC and send queries according to database schema and required operations.
+
+Database schema is :
+-> User(userID:int, userName:varchar(30), email:varchar(30), password:varchar(30), status:varchar(15))
+-> Video(videoID:int, userID:int, videoTitle:varchar(60), likeCount:int, dislikeCount:int, datePublished:date)
+-> Comment(commentID:int, userID:int, videoID:int, commentText:varchar(1000), dateCommented:date)
+-> Watch(userID:int, videoID:int, dateWatched: date)
+
+
+Required operations :
+• Creating the database tables
+• Inserting data into tables
+• List videos which have higher likeCount than dislikeCount
+• List videos commented by the given userID
+• Find the oldest published video for a given user which doesn’t contain ’VLOG’ in its title
+• List the trending top three videos for a given time interval (detailed explanation is given below)
+• List users and number of videos watched only by her/him
+• List users who have watched and commented all of their own videos
+• List the users that has at least one watch but no comments
+• Update the users’ status to ”verified” if the view count of all their videos in total is more than the given number
+• Given a video id and a string, update the title of the video with the given id to the new string
+• Given video title, delete that video from the database
+• Dropping the database tables
